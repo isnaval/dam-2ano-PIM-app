@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # SGE Inventario
 
 ## Descripción
@@ -28,3 +29,7 @@ Seguir Clean Architecture
 Crear previews de cada pantalla con datos de ejemplo
 
 
+=======
+# dam-2ano-PIM-app
+Proyecto Intermodular -Gestión de Inventario - 2º DAM
+>>>>>>> c4106c4217f29fcb6448ce060131cb483a3a7190
