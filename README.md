@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # SGE Inventario
 
 ## Descripción
@@ -33,3 +34,6 @@ Crear previews de cada pantalla con datos de ejemplo
 # dam-2ano-PIM-app
 Proyecto Intermodular -Gestión de Inventario - 2º DAM
 >>>>>>> c4106c4217f29fcb6448ce060131cb483a3a7190
+=======
+
+>>>>>>> cfd8ff36a80a94a4dbc9fcaab4b6572ad3cce7ca
