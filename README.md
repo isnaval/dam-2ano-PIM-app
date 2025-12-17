@@ -17,23 +17,17 @@ RUTA: src/main/kotlin/com.sge_inventario/features
 CONTINUACIÓN: Para poder navegar entre las pantallas:
 1. Añado nueva dependencia en build.gradle.kts
 2. Creo el archivo de navegacion que llamare NavitationRoutes.kt
-3. Modifico Main para incluir la funcionalida de la navegación
+3. Modifico Main para incluir la funcionalida de la navegación 
 4. MOdifico toos los screens para soprotar la navegación (inlcuido ()
-   ================================================================================================
-5. El componente CORE - lo eh efinido en sus tres modulos: 
+
+================================================================================================
+5. El componente CORE - lo he definido en sus tres modulos: 
    - navigation: para definir las rutas de navegación 
    - theme: donde defino tanto los colore (en uso primario y seguncario) y temas para darle una image corporativa
    - utils: donde solo he definido constante a usar a lo largo del programa
 
-
-
-
-
-
-
-
-
-================================================================================================
+---
+---
 # SGE Inventario
 
 ## Descripción
