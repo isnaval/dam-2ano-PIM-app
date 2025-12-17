@@ -7,11 +7,11 @@ plugins {
 
 android {
     // Configuración del proyecto Android
-    namespace = "com.ismael.sge_inventario"
+    namespace = "com.sge_inventario"
     compileSdk { version = release(36) }
 
     defaultConfig {
-        applicationId = "com.ismael.sge_inventario"
+        applicationId = "com.sge_inventario"
         minSdk = 24
         targetSdk = 36
         versionCode = 1

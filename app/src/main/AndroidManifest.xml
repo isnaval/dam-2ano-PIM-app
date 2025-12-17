@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ismael.sge_inventario">
+    package="com.sge_inventario">
 
     <application
         android:label="SGE Inventario">

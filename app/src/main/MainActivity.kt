@@ -1,4 +1,4 @@
-package com.ismael.sge_inventario
+package com.sge_inventario
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
