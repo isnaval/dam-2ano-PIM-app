@@ -6,11 +6,17 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import com.ismael.sge_inventario.core.navigation.NavigationRoutes
 import com.ismael.sge_inventario.core.theme.SGEInventarioTheme
+import com.ismael.sge_inventario.features.authentication.presentation.screens.LoginScreen
+import com.ismael.sge_inventario.features.equipment.presentation.screens.EquipmentListScreen
+import com.ismael.sge_inventario.features.equipment.presentation.screens.EquipmentDetailScreen
+import com.ismael.sge_inventario.features.requests.presentation.screens.RequestListScreen
+import com.ismael.sge_inventario.features.requests.presentation.screens.NewRequestScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,25 +27,47 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("SGE Inventario")
+                    val navController = rememberNavController()
+
+                    NavHost(
+                        navController = navController,
+                        startDestination = NavigationRoutes.LOGIN
+                    ) {
+                        composable(NavigationRoutes.LOGIN) {
+                            LoginScreen { navController.navigate(NavigationRoutes.EQUIPMENT_LIST) }
+                        }
+
+                        composable(NavigationRoutes.EQUIPMENT_LIST) {
+                            EquipmentListScreen(
+                                onEquipmentSelected = { equipment ->
+                                    navController.navigate("${NavigationRoutes.EQUIPMENT_DETAIL}/${equipment.id}")
+                                },
+                                onNewRequestClick = {
+                                    navController.navigate(NavigationRoutes.NEW_REQUEST)
+                                }
+                            )
+                        }
+
+                        composable("${NavigationRoutes.EQUIPMENT_DETAIL}/{equipmentId}") { backStackEntry ->
+                            EquipmentDetailScreen(
+                                equipmentId = backStackEntry.arguments?.getString("equipmentId")
+                            )
+                        }
+
+                        composable(NavigationRoutes.REQUEST_LIST) {
+                            RequestListScreen {
+                                navController.navigate(NavigationRoutes.NEW_REQUEST)
+                            }
+                        }
+
+                        composable(NavigationRoutes.NEW_REQUEST) {
+                            NewRequestScreen {
+                                navController.navigateUp()
+                            }
+                        }
+                    }
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Bienvenido a $name",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    SGEInventarioTheme {
-        Greeting("SGE Inventario")
     }
 }

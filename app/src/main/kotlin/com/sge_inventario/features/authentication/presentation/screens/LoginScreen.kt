@@ -1,4 +1,4 @@
-﻿package com.ismael.sge_inventario.features.authentication.presentation.screens
+﻿package com.sge_inventario.features.authentication.presentation.screens
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.Button
