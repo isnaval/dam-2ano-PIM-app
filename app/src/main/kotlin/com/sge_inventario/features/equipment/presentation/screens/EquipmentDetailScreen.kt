@@ -1,6 +1,5 @@
 package com.sge_inventario.features.equipment.presentation.screens
 
-
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
@@ -13,8 +12,8 @@ fun EquipmentDetailScreen() {
     Column {
         Text("Detalles del Equipo")
         TextField(
-            value= "",
-            onValueChange= {},
+            value = "",
+            onValueChange = {},
             label = { Text("Nombre") }
         )
         Button(onClick = { }) {
@@ -25,6 +24,6 @@ fun EquipmentDetailScreen() {
 
 @Preview(showBackground = true)
 @Composable
-fun EquipamentDetalScreenPreview() {
-    EquipmentListScreen()
+fun EquipmentDetailScreenPreview() {
+    EquipmentDetailScreen()
 }

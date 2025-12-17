@@ -1,4 +1,4 @@
-﻿package com.ismael.sge_inventario.core.navigation
+﻿package com.sge_inventario.core.navigation
 
 object NavigationRoutes {
     const val LOGIN = "login"

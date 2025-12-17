@@ -7,10 +7,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
-fun RequestListScreen() {
+fun RequestListScreen(
+    onNewRequestClick: () -> Unit
+) {
     Column {
-        Text("Solicitud de Equipamoiento")
-        Button(onClick = { }) {
+        Text("Solicitud de Equipamiento")
+        Button(onClick = onNewRequestClick) {
             Text("Nueva Solicitud")
         }
     }
@@ -18,6 +20,8 @@ fun RequestListScreen() {
 
 @Preview(showBackground = true)
 @Composable
-fun RequestListScreenPreview(){
-    RequestListScreen()
+fun RequestListScreenPreview() {
+    RequestListScreen(
+        onNewRequestClick = {}
+    )
 }

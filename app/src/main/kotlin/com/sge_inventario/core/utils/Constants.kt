@@ -1,5 +1,4 @@
-﻿// Constants.kt
-package com.ismael.sge_inventario.core.utils
+﻿package com.sge_inventario.core.utils
 
 object Constants {
     // Constantes generales de la aplicación

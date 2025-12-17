@@ -1,4 +1,4 @@
-﻿package com.ismael.sge_inventario.core.theme
+﻿package com.sge_inventario.core.theme
 
 import androidx.compose.ui.graphics.Color
 object SGEInventarioColors {
